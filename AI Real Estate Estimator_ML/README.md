@@ -1,11 +1,40 @@
-# 📊 Modelo de ML para el la evaluacion y tasación de activos inmobiliarios 🏘️
+# 📊 AI Real Estate Estimator - Modelo de ML para el la evaluacion y tasación de activos inmobiliarios  🏘️
 
-Este proyecto utiliza Machine Learning para predecir el precio de una vivienda en función de sus características. Se emplea un modelo de regresión de Random Forest para lograr predicciones precisas.
+Este proyecto de aprendizaje automático tiene como objetivo desarrollar un modelo para predecir los precios de las propiedades inmobiliarias utilizando técnicas de aprendizaje automático.
+
+## Contenido del Proyecto
+
+El proyecto se compone de los siguientes elementos:
+
+1. **Notebooks**:
+    - [`Prep_Data.ipynb`](https://github.com/cescrosello/ML/blob/main/AI%20Real%20Estate%20Estimator_ML/notebooks/Prep_Data.ipynb): Este notebook se enfoca en la preparación de los datos para el modelado. Incluye tareas como carga de datos, limpieza, manipulación y transformación de características.
+    - [`proyecto_ml.ipynb`](https://github.com/cescrosello/ML/blob/main/AI%20Real%20Estate%20Estimator_ML/notebooks/proyecto_ml.ipynb): En este notebook se realiza el desarrollo del modelo de aprendizaje automático. Incluye entrenamiento de modelos, ajuste de hiperparámetros, evaluación de rendimiento y visualización de resultados.
+
+2. **Datos**:
+    - [`dataset_viviendas.csv`](https://github.com/cescrosello/ML/blob/main/AI%20Real%20Estate%20Estimator_ML/data/dataset_viviendas.csv): Archivo CSV que contiene los datos históricos de ventas de propiedades inmobiliarias.
+
+3. **Scripts**:
+    - `train.py`: Script de Python para entrenar el modelo de aprendizaje automático. Carga los datos, entrena el modelo y guarda el modelo entrenado en un archivo.
+
+4. **Dashboard**:
+    - `dashboard.py`: Script de Python que utiliza Streamlit para crear un dashboard interactivo. Muestra cómo aprende el modelo, los hiperparámetros utilizados y los resultados obtenidos.
+
+5. **Requisitos**:
+    - `requirements.txt`: Archivo que contiene las dependencias necesarias para ejecutar los scripts y notebooks del proyecto.
+
+## Instrucciones de Uso
+
+1. **Preparación de Datos**:
+    - Abre y ejecuta el notebook `Prep_Data.ipynb` para preparar los datos para el modelado.
+
+2. **Entrenamiento del Modelo**:
+    - Utiliza el script `train.py` para entrenar el modelo de aprendizaje automático. Ejecuta el comando `python train.py` en tu terminal.
+
+3. **Dashboard**:
+    - Ejecuta el script `dashboard.py` para abrir el dashboard interactivo que muestra los resultados del modelo. Utiliza el comando `streamlit run dashboard.py`.
 
 ## Principales librerías utilizadas
-![pycaret](https://img.shields.io/badge/pycaret-%23F69220?style=for-the-badge&logo=pycaret&logoColor=white)
-![plotly-express](https://img.shields.io/badge/plotly--express-%23412692?style=for-the-badge&logo=plotly&logoColor=white)
-![fast-ml](https://img.shields.io/badge/fast--ml-%23333333?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgdmlld0JveD0iMCAwIDE2MCAxNjAiIHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIj4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0iIzEzNjM2MyIgc3R5bGU9ImZpbGw6cmVkOyIgLz4KPC9zdmc+Cg==)
+
 ![beautifulsoup4](https://img.shields.io/badge/beautifulsoup4-%2300BDC7?style=for-the-badge&logo=beautifulsoup4&logoColor=white)
 ![category-encoders](https://img.shields.io/badge/category--encoders-%23F37788?style=for-the-badge&logo=python&logoColor=white)
 ![folium](https://img.shields.io/badge/folium-%23000075?style=for-the-badge&logo=folium&logoColor=white)
@@ -17,3 +46,8 @@ Este proyecto utiliza Machine Learning para predecir el precio de una vivienda e
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![seaborn](https://img.shields.io/badge/seaborn-%2328557B?style=for-the-badge&logo=seaborn&logoColor=white)
 ![streamlit](https://img.shields.io/badge/streamlit-%235869FF?style=for-the-badge&logo=streamlit&logoColor=white)
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, por favor abre un problema o envía una solicitud de extracción con tus cambios propuestos.
+
