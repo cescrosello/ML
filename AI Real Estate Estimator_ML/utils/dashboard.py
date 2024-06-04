@@ -40,7 +40,7 @@ if 'max_price' not in st.session_state:
     st.session_state['max_price'] = None
 
 # Crear el formulario de entrada
-st.title("Predicción del Precio de la Vivienda")
+st.title("AI Real Estate Estimator")
 
 # Dirección y número
 st.header("Ubicación de la Vivienda")
@@ -69,7 +69,7 @@ with col1:
     banos = st.number_input("Baños", min_value=0, help="Ingrese el número de baños.")
 
 with col2:
-    terraza = st.number_input("Terraza", min_value=0, help="Ingrese el número de terrazas.")
+    ano_construccion = st.number_input("Año de Construcción", min_value=1800, max_value=2024, help="Ingrese el año de construcción.")
     ascensor = st.number_input("Ascensor", min_value=0, help="Ingrese el número de ascensores.")
     aire_acondicionado = st.number_input("Aire Acondicionado", min_value=0, help="Ingrese el número de aires acondicionados.")
 
@@ -77,21 +77,20 @@ with col3:
     garaje = st.number_input("Garaje", min_value=0, help="Ingrese el número de garajes.")
     trastero = st.number_input("Trastero", min_value=0, help="Ingrese el número de trasteros.")
     piscina = st.number_input("Piscina", min_value=0, help="Ingrese el número de piscinas.")
-    conserje = st.number_input("Conserje", min_value=0, help="Ingrese el número de conserjes.")
-    ano_construccion = st.number_input("Año de Construcción", min_value=1800, max_value=2024, help="Ingrese el año de construcción.")
+    
 
 # Crear el diccionario de datos de entrada
 input_data = {
     'Metros_Construidos': metros_construidos,
     'Habitaciones': habitaciones,
     'Baños': banos,
-    'Terraza': terraza,
+    'Terraza': 0,
     'Ascensor': ascensor,
     'Aire_Acondicionado': aire_acondicionado,
     'Garaje': garaje,
     'Trastero': trastero,
     'Piscina': piscina,
-    'Conserje': conserje,
+    'Conserje': 0,
     'Año_construcción': ano_construccion,
     'Servicios': 0,
     'Armarios': 0,
@@ -119,8 +118,8 @@ col_izquierda, col_derecha = st.columns(2)
 
 # Opción 1: Tasa la vivienda
 with col_izquierda:
-    st.header("Tasación del Inmueble")
-    if st.button("Tasa la vivienda"):
+    st.header("Tasación")
+    if st.button("Tasa el inmueble"):
         if st.session_state['latitud'] is not None and st.session_state['longitud'] is not None:
             input_data['Latitud'] = st.session_state['latitud']
             input_data['Longitud'] = st.session_state['longitud']
@@ -163,6 +162,5 @@ with col_derecha:
 
 # Mostrar algunos detalles adicionales en la página principal
 st.write("""
-Este dashboard permite predecir el precio de una vivienda basada en sus características.
-Complete el formulario en la barra horizontal y presione el botón para obtener el precio predicho.
+ © Copyright Propiedad de Sex SL».
 """)
